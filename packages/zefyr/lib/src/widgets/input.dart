@@ -62,8 +62,10 @@ class InputConnectionController implements TextInputClient {
     }
   }
    
-  //to keep the compiler happy
-  @override AutofillScope get currentAutofillScope => null;
+  // to keep the compiler happy
+  // info from https://flutter.dev/docs/release/breaking-changes/add-currentAutofillScope-to-TextInputClient
+  // AutofillScope not implementer in Flutter 1.17.3 channel stable 
+  // @override AutofillScope get currentAutofillScope => null;
   //to keep the compiler happy
   @override
   showAutocorrectionPromptRect(int start,int end){
